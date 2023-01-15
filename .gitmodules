@@ -1,0 +1,6 @@
+[submodule "lib/utils"]
+	path = lib/utils
+	url = git@github.com:TsuMakoto/PyProjUtils.git
+[submodule "lib/pipeline"]
+	path = lib/pipeline
+	url = git@github.com:TsuMakoto/PyProjPipeline.git
