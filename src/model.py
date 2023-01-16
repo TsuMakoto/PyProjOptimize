@@ -1,4 +1,4 @@
-from abc import ABCMeta, abstractmethod
+from dataclasses import dataclass
 
 from .__model.constraint import Constraint
 from .__model.objective import Objective
@@ -6,12 +6,12 @@ from .__model.variable import Variable
 from .problem import Problem
 
 
+@dataclass
 class Model:
-    def __init__(self, problem: Problem):
-        self.problem = problem
-        self.variable = Variable(problem)
-        self.constraint = Constraint(problem)
-        self.objective = Objective(problem)
+    problem: problem
+    variable: Variable
+    constraint: Constraint
+    objective: Objective
 
     def make(self):
         self.variable.generate()
