@@ -8,7 +8,7 @@ from .problem import Problem
 
 @dataclass
 class Model:
-    problem: problem
+    problem: Problem
     variable: Variable
     constraint: Constraint
     objective: Objective

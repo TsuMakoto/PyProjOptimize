@@ -12,4 +12,6 @@ class Optimizer:
     solver: Solver
 
     def optimize(self):
-        return PipeOperator(self.model) * self.solver.solve >> self.solver.evaluate
+        return PipeOperator(self.model) * \
+            self.solver.solve >> \
+            self.solver.evaluate

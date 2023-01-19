@@ -1,8 +1,5 @@
 from abc import ABCMeta, abstractmethod
-
-from .__model.constraint import Constraint
-from .__model.objective import Objective
-from .__model.variable import Variable
+from dataclasses import dataclass
 
 
 class Params:
