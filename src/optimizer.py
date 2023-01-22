@@ -13,5 +13,5 @@ class Optimizer:
 
     def optimize(self):
         return PipeOperator(self.model) * \
-            self.solver.solve >> \
+            self.solver.solve > \
             self.solver.evaluate
