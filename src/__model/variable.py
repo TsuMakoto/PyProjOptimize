@@ -1,17 +1,9 @@
-from abc import ABCMeta, abstractmethod
 from dataclasses import dataclass
 
-from ..problem import Problem
+from .base import Base
 
 
 @dataclass
-class Variable(metaclass=ABCMeta):
-    problem: Problem
-
-    @abstractmethod
+class Variable(Base):
     def generate(self):
-        pass
-
-    @abstractmethod
-    def fix(self):
         pass

@@ -1,13 +1,13 @@
 from abc import ABCMeta, abstractmethod
 from dataclasses import dataclass
 
-from ..problem import Problem
+from .base import Base
 from .variable import Variable
 
 
 @dataclass
-class Objective(metaclass=ABCMeta):
-    problem: Problem
+class Objective(Base, metaclass=ABCMeta):
+    variable: Variable
     is_valid: bool = True
     msg: str = ""
 
@@ -15,9 +15,5 @@ class Objective(metaclass=ABCMeta):
     def configurate(self):
         pass
 
-    @abstractmethod
     def validate(self):
         pass
-
-    def set_variable(self, variable: Variable):
-        self.variable = variable
